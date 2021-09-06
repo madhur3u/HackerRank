@@ -9,11 +9,10 @@ public class Solution {
         int n = scn.nextInt();
         int p = scn.nextInt();
 
-        if (p > n/2) {
-            if (n % 2 == 0 && n - p == 1 ) System.out.println(1);
-            else System.out.println((n-p)/2);
-        }
-        else System.out.println(p/2);
+       /* if (p > n/2) System.out.println((n/2) - (p/2));
+        else System.out.println(p/2); */
 
+        System.out.println((int)Math.min(((n/2) - (p/2)) , (p/2)));  // solve in one line by finding minimum
     }
 }
+
