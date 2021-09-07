@@ -18,3 +18,6 @@ else :
 mul = b - d + 1
 sq = int(math.sqrt(a))
 print(sq*mul)
+
+
+print(((n+1)//2)*((m+1)//2)) # this code can be solved even in one line -_-
