@@ -1,5 +1,8 @@
 # https://www.hackerrank.com/challenges/harry-potter-and-the-floating-rocks/problem 
+
 # https://www.hackerrank.com/challenges/harry-potter-and-the-floating-rocks/editorial
+# https://www.geeksforgeeks.org/number-integral-points-two-points/
+# https://math.stackexchange.com/questions/628117/how-to-count-lattice-points-on-a-line
 
 def gcd(x,y):
     while(y!=0):
