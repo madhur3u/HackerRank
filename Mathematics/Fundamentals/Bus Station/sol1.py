@@ -20,12 +20,11 @@ for lbus in b:
         s = s + a[i] # sum of all groups till i
         if (s == lbus): # if sum of groups is equal to lbus which is a factor we found above make s = 0 again
             s = 0
-            if i == n-1 : c = 1 # this check if the sum is equal till last group is seated or not
         
         if (s > lbus) : # if sum become greater that ln is not acceptable so break 
             c = 0
             break
     
-    if (c == 1) : print(lbus,end =" ") # if c = 1 which is the s == lbus till last then print value of bus length
+    if (s == 0) : print(lbus,end =" ") # if s = 0 then it is value as inside 1st if we are doind s = 0 if lbus is the one
 
 print(x) # one length will always be the total sum of all which we print in last
