@@ -12,7 +12,6 @@ for _ in range(int(input())):
     # (a , a + b)
     # (a - b , b)
     # (a , b - a)
-    # add all x and y elements here we get (4a , 4b)
     ''' According to the definition of Greatest Common Divisior, if m is any integer, 
     then gcd(a + m * b, b) = gcd(a, b). (In this particular problem m = 1 or m = -1 in each step.) 
     Therefore, the gcd of (a + b, b), (a, a + b), (a - b, b) and (a, a - b) will be the same as the 
