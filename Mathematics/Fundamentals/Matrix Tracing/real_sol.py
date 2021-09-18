@@ -1,28 +1,27 @@
 # https://www.hackerrank.com/challenges/matrix-tracing/problem
 
 import math
+mod = 10**9 + 7
 
-def fact(n, p):
-    prod = 1
-    if (n >= p): return 0
-    
-    for i in range(1,n+1):
-        prod = (prod * i)%p
+def modinv(n,p):
+    return pow(n,p-2,p)
 
-    return prod
+def ncr(n,r,p):
+    if r > n:
+        return 0
+  
+    nu = 1
+    for i in range(n-r+1, n+1):
+        nu = (nu * i) % p
+  
+    de = 1
+    for i in range(2,r+1):
+        de = (de * i) % p
+    return (nu * modinv(de, p)) % p
 
-def solve(m, n):
-    x = fact(m+n-2, 1000000007)
-    y = pow(fact(m-1, 1000000007) * fact(n-1, 1000000007), 1000000005, 1000000007)
-    return x*y%1000000007
-
-T = int(input())
-for i in range(0,T):
-    nums = input()
-    m, n = nums.split()
-    m = int(m)
-    n = int(n)
-    print(solve(m, n))
+for case in range(int(input())):
+    (m,n) = map(int, input().split())
+    print(ncr(m+n-2, n-1, mod))
     
 ''' The answer is that we have (N-1+M-1)!/((N-1)!(M-1)!) different paths for given M and N. 
 For example for the sample input, we have (2-1+3-1)!/((2-1)!(3-1)!) = 3!/(1*2) which is 6/2= 3.
