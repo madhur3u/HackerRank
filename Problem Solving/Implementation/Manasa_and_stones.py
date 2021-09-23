@@ -18,7 +18,7 @@ for _ in range(int(input())):
             s = a * (n - i) + b * i       # see below explanantion
             print(s, end=' ')
         
-    print()                               # this print is to go to next line in the end                  
+        print()                           # this print is to go to next line in the end                  
             
 '''          
 n = 5
