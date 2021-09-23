@@ -1,5 +1,9 @@
 // https://www.hackerrank.com/challenges/save-the-prisoner/problem
 
+// In this problem, we need to determine the ID of the prisoner reached after moving M-1 steps from S.
+// ID of last prisoner= (M-1+S)
+// Since we are moving in a circle, we need to get the modulo of this sum with N
+
 import java.io.*;
 import java.util.*;
 
@@ -16,12 +20,10 @@ public class Solution {
         
             m = m % n;
             
-            long x = s + m - 1;
+            long x = (s + m - 1) % n;
             
-            if (x > n) System.out.println((s + m - 1) % n);
-            else if (x == 0) System.out.println(n);
-            else System.out.println(x);
-        
+            if (x == 0) x = n;
+            System.out.println(x);
         }
     }
 }
