@@ -16,6 +16,12 @@ else :
     print(ans)
     
     
+# sum of gp, s = [a*(r**n - 1)] / (r-1)
+# her we have, r = 2, a = 3
+#             s = 3*(2**n - 1)
+#             2**n = (s/3 + 1)
+#             n = log(s/3 + 1) / log 2
+ 
 '''    
 t = int(input())  # alternate way using loop
 
