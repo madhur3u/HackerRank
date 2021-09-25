@@ -1,3 +1,6 @@
+# https://www.hackerrank.com/challenges/bomber-man/
+# answer was correct using this but in actual sol using functions it is more understandable
+
 r, c , time = map(int, input().split())
 grid1 = [input() for i in range(r)]
 
