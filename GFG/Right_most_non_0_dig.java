@@ -18,37 +18,37 @@ class test
   {
     int count5 = 0;
 
-    for (int i = 0; i < n; i++)                 // first we will find the count of 5 in array
-    { // we need to tke every element and check if it is divisible by 5
+    for (int i = 0; i < n; i++)                   // first we will find the count of 5 in array
+    {                                             // we need to tke every element and check if it is divisible by 5
       while (a[i] > 0 && a[i] % 5 == 0)           // if it is then divide the element by 5 till it divides by 5
-      { // count5 will increment each time we divide a number by 5
+      {                                           // count5 will increment each time we divide a number by 5
         a[i] = a[i] / 5;
         count5++;
-      }                           // after coming out of this loop we have total no. of 5 in array
+      }                                           // after coming out of this loop we have total no. of 5 in array
 
-      if (a[i] == 0) return (-1);               // this check for a[i] to be zero if it is our multiplication will always be 0
+      if (a[i] == 0) return (-1);                 // this check for a[i] to be zero if it is our multiplication will always be 0
     }
     for (int i = 0; i < n; i++)
-    { // now we are going to find no. of multiples of 2 in array
+    {                                                     // now we are going to find no. of multiples of 2 in array
       while (count5 > 0 && a[i] > 0 && a[i] % 2 == 0)     // same logic divide a multipe of 2 till it divides
-      { // here we will do count5--, because 2 * 5 makes 10
-        a[i] = a[i] / 2;                  // and we need to remove 10s from our array
-        count5--;                     // so when we find a 2 we decrease count5 as we have found a 10
-      }                           // loop ends if count5 == 0 as all 5 are now over
-    }                             // so we dont' need to remove 2 now as it will not make 10
+      {                                                   // here we will do count5--, because 2 * 5 makes 10
+        a[i] = a[i] / 2;                                  // and we need to remove 10s from our array
+        count5--;                                         // so when we find a 2 we decrease count5 as we have found a 10
+      }                                                   // loop ends if count5 == 0 as all 5 are now over
+    }                                                     // so we dont' need to remove 2 now as it will not make 10
 
     int m = 1;
-    for (int i = 0; i < n; i++)                 // m stores multiplication of last digit only
-    { // we have removed all 10s so now our last digit will always be non zero
-      m = ((m % 10) * (a[i] % 10)) % 10;            // so we only take last digit of m(previous ans) ans last digit of a[i]
-    }                             // and % 10 so we always store a single digit in m
+    for (int i = 0; i < n; i++)                   // m stores multiplication of last digit only
+    {                                             // we have removed all 10s so now our last digit will always be non zero
+      m = ((m % 10) * (a[i] % 10)) % 10;          // so we only take last digit of m(previous ans) ans last digit of a[i]
+    }                                             // and % 10 so we always store a single digit in m
 
-    if (count5 != 0)                      // there might be a chance that no. of 2 were less than no. of 5
-    { // in that case we have to multiply by 5 our ans, as irrespective of no. of 5
-      m = (m * 5) % 10;                   // last digit will always be 5, eg if count = 1 and count = 3
-    }                             // it will be 5 and 125 , so last digit is 5, %10 to store only last digit
+    if (count5 != 0)                              // there might be a chance that no. of 2 were less than no. of 5
+    {                                             // in that case we have to multiply by 5 our ans, as irrespective of no. of 5
+      m = (m * 5) % 10;                           // last digit will always be 5, eg if count = 1 and count = 3
+    }                                             // it will be 5 and 125 , so last digit is 5, %10 to store only last digit
 
-    return m;                           // m is the rightmost non zero digit
+    return m;                                     // m is the rightmost non zero digit
   }
   public static void main (String[] args) throws java.lang.Exception
   {
