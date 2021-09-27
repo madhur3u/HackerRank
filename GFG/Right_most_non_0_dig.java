@@ -31,8 +31,7 @@ class main
 
 			if (a[i] == 0) return (-1);								// this check for a[i] to be zero if it is our multiplication will always be 0
 		}
-		for (int i = 0; i<n; i++) 
-		{															// now we are going to find no. of multiples of 2 in array
+		for (int i = 0; i<n; i++) 		{															// now we are going to find no. of multiples of 2 in array
 			while (count5 > 0 && a[i] > 0 && a[i] % 2 == 0)			// same logic divide a multipe of 2 till it divides 
 			{														// here we will do count5--, because 2 * 5 makes 10
 				a[i] = a[i] / 2;									// and we need to remove 10s from our array
