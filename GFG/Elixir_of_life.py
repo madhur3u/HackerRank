@@ -12,7 +12,6 @@
 
 def maxFrequency(s):
 
-
 	i = 1							# this take care of substring length
 	while i < len(s)//2 + 1 :		# loop till half 
 
