@@ -17,7 +17,7 @@ def maxFrequency(s):
     # loop till half
     while i < len(s)//2 + 1:		
 
-        s1 = s[: i]					# prefix
+        s1 = s[: i]				# prefix
         s2 = s[len(s) - i:]			# suffix
         i += 1						
 
