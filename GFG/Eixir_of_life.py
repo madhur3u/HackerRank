@@ -12,19 +12,24 @@
 
 def maxFrequency(s):
 
-    i = 1							# this take care of substring length
-    while i < len(s)//2 + 1:		# loop till half
+    i = 1
+    # this take care of substring length inc i in each iteration
+    # loop till half
+    while i < len(s)//2 + 1:		
 
         s1 = s[: i]					# prefix
         s2 = s[len(s) - i:]			# suffix
-        i += 1						# inc i for next iteration
+        i += 1						
 
         print(s1, s2)
-
-        if s1 == s2: 				# checking suffix and prefix
-            return s.count(s1)		# if equal then return count of substring
-
-    return 1						# if no substring equal or length 1 -> it returns 1
+        
+        # checking suffix and prefix
+        # if equal then return count of substring
+        if s1 == s2: 				
+            return s.count(s1)		
+    
+    # if no substring equal or length 1 -> it returns 1
+    return 1						
 
 
 # main
