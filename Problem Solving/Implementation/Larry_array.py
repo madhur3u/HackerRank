@@ -31,6 +31,6 @@ For this problem, the array can be solved with the given formula if the total nu
 A "rotation" does not change the parity of the number of inversions. That's the key to solving this. 
 The array can be sorted only if the initial number of inversions is even (this is because you want 0 inversions at the end, which is even).
 
-in order to check if the array can ever be sorted by rotating R consecutive elements until it gets sorted, 
-then the number of inversions should be divisible by R-1.
 '''
+# in order to check if the array can ever be sorted by rotating R consecutive elements until it gets sorted, 
+# then the number of inversions should be divisible by R-1.
