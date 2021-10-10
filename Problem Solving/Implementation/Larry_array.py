@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/larrys-array/problem
+
 def count_Inversions(a, n):                     # bruteforce method to find inversions
     
     c = 0
