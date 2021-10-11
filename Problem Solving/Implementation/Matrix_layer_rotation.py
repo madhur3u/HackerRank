@@ -1,4 +1,5 @@
 # https://www.hackerrank.com/challenges/matrix-rotation-algo/problem
+# https://leetcode.com/problems/cyclically-rotating-a-grid/
 
 # matrix shell rotation all layers
 # there will always be a shell as min(n,m)%2 = 0 is a constrain
