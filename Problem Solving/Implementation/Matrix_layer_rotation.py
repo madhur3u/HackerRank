@@ -98,11 +98,11 @@ def update2darray(arr, a1, shell, n, m):
     return a1
     
 # main 
-n, m, r = map(int, input().split())								# input of row len, col len and no. of rotations
+n, m, r = map(int, input().split())							# input of row len, col len and no. of rotations
 matrix = [list(map(int, input().split())) for i in range(n)]	# input 2D array
 
 for shell in range(1, min(n,m)//2 + 1):							# this loop give us no. of shells, no of shells always min(n,m)//2
     rotateShell(matrix, shell, n, m, r)							# rotating each shell of matrix
 
-for i in range(n):												# printing rotated matrix
+for i in range(n):									# printing rotated matrix
     print(*matrix[i])
