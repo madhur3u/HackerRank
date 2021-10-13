@@ -32,6 +32,6 @@ RECURSION TREE FOR N = 5
              cdr(4)          cdr(3)   
            /      \         /     \
        cdr(3)     cdr(2)  cdr(2)   cdr(1)
-	    /     \
-	cdr(2)   cdr(1)	   
+      /     \
+    cdr(2)   cdr(1)	   
 '''
