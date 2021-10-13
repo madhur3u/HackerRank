@@ -1,3 +1,5 @@
+# https://www.geeksforgeeks.org/count-derangements-permutation-such-that-no-element-appears-in-its-original-position/
+
 def countDer(n):
 
     # Base cases
@@ -7,7 +9,7 @@ def countDer(n):
     ans = (n - 1) * (countDer(n - 1) + countDer(n - 2))
     return ans
 
-# Driver Code
+# main
 n = 4
 print("Count of Derangements is ", countDer(n))
 
