@@ -1,4 +1,6 @@
 # https://www.geeksforgeeks.org/count-derangements-permutation-such-that-no-element-appears-in-its-original-position/
+# https://practice.geeksforgeeks.org/problems/dearrangement-of-balls0918/1#
+# % 1000000007 for bigg ans
 
 def countDer(n):
      
@@ -13,11 +15,11 @@ def countDer(n):
     # Fill der[0..n] in bottom up manner
     # using above recursive formula
     for i in range(3, n + 1):
-        der[i] = (i - 1) * (der[i - 1] + der[i - 2])
+        der[i] = (i - 1) * (der[i - 1] % 1000000007 + der[i - 2] % 1000000007) % 1000000007
          
     # Return result for n
     print(*der)
-    return der[n]
+    return der[n] % 1000000007
  
 # main
 n = 5
