@@ -36,11 +36,11 @@ for value in s:
     # add value to all rows if not X in that place 
     for i in range(len(dist)):
 
-        if matrix[i][j] != 'X':		# check if not X (never at starting)
+        if matrix[i][j] != 'X':		                                                # check if not X (never at starting)
 
             matrix[i][j] += value
             if len(matrix[i][j]) >= 2 and matrix[i][j][-1] == matrix[i][j][-2] : 	# if two adjacent elements equal then cant be valid 
-                matrix[i][j] = 'X'													# then make that el X, now we will not consider this
+                matrix[i][j] = 'X'							# then make that el X, now we will not consider this
     
     # add values to all columns, same as rows
     for i in range(len(dist)):
