@@ -9,8 +9,16 @@ def fact(n) :
     return f
 
 q = int(input())
+
 for x in range(q):
+    
     n, m = map(int, input().split())
     m = m-1
     x = fact(n+m)//(fact(n)*fact(m))  # no. of ways it can arrange unique is 1 * (n+m)! // (n! * m!) 
     print(x % 1000000007)
+
+# ex : for n = 2 means two 0, and m = 3 means 3 ones , 00111
+# now we will fix one 1 at 1st position so it is 1 _ _ _ _
+# we have 4 black poistion and need to find all permutations of remaining 0 and 1 which will be answer
+# all permutations = 4! , but since there are two zeroes so divide by 2! to avoid repititions, same for 1 also
+# therefore ans becomes --> 4! / (2! * 2!)
