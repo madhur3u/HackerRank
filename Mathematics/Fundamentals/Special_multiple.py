@@ -8,12 +8,14 @@ for i in range(1,5000):                  # this create a array of 1st 5000 numbe
     a.append(db(i)*9)
     
 for q in range(int(input())):
+    
     n = int(input())
+    
     for i in a :                         # iterating in our arrays of 9's 
-        x = i                            # store value temporarily in x 
-        if(i % n == 0) : break           # if the i is divisible bt N so we found our answer
+        if(i % n == 0) :                 # if the i is divisible bt N so we found our answer
+            print(i)
+            break
         
-    print(x)
 
 # binary digits 1-8
 # 000 
