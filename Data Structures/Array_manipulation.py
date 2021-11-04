@@ -9,7 +9,8 @@ for _ in range(q):                            # run a loop for queries and take 
     a, b, k = map(int, input().split())
 
     arr[a] = arr[a] + k                       # adding  k to index a
-    if (b+1) <= n : arr[b+1] = arr[b+1] - k   # addinf -k to index (b+1)
+    if (b+1) <= n : 
+        arr[b+1] = arr[b+1] - k               # adding -k to index (b+1)
 
 # Doing this kind of update, the ith number in the array will be prefix sum of array from index 1 to i because we are adding k to the 
 # value at index a and subtracting k from the value at index b+1 and taking prefix sum will give us the actual value for each index after q operations  
